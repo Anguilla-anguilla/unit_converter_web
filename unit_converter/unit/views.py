@@ -2,7 +2,8 @@ from django.shortcuts import render
 
 
 def length(request):
-    pass
+    template = 'unit/length.html'
+    return render(request, template)
 
 
 def weight(request):
