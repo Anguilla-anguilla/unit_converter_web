@@ -1,3 +1,13 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def length(request):
+    pass
+
+
+def weight(request):
+    pass
+
+
+def temperature(request):
+    pass
