@@ -1,0 +1,28 @@
+{% extends "base.html "%}
+{% load static %}
+
+{% block content %}
+
+  <h2>Weight Converter</h2>
+  <label for="weight-input">Enter weight:</label>
+  <input type="number" id="weight-input" name="weight" placeholder="Enter Weight">
+  <label for="weight-from">From:</label>
+  <select id="weight-from">
+    <option value="mg">milligram</option>
+    <option value="g">gram</option>
+    <option value="kg">kilogram</option>
+    <option value="oz">ounce</option>
+    <option value="lb">pound</option>
+  </select>
+  <label for="weight-to">To:</label>
+  <select id="weight-to">
+    <option value="mg">milligram</option>
+    <option value="g">gram</option>
+    <option value="kg">kilogram</option>
+    <option value="oz">ounce</option>
+    <option value="lb">pound</option>
+  </select>
+  <button type="button">Convert</button>
+  <div class="result">Result: {{ result }}</div> 
+
+{% endblock %}

@@ -1,0 +1,24 @@
+{% extends "base.html "%}
+{% load static %}
+
+{% block content %}
+
+  <h2>Temperature Converter</h2>
+  <label for="temperature-input">Enter Temperature:</label>
+  <input type="number" id="temperature-input" name="temperature" placeholder="Enter temperature">
+  <label for="temperature-from">From:</label>
+  <select id="temperature-from">
+    <option value="C">Celsius</option>
+    <option value="F">Fahrenheit</option>
+    <option value="K">Kelvin</option>
+  </select>
+  <label for="temperature-to">To:</label>
+  <select id="temperature-to">
+    <option value="C">Celsius</option>
+    <option value="F">Fahrenheit</option>
+    <option value="K">Kelvin</option>
+  </select>
+  <button type="button">Convert</button>
+  <div class="result">Result: {{ result }}</div>
+
+{% endblock %}

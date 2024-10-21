@@ -2,27 +2,33 @@
 {% load static %}
 
 {% block content %}
-<main>
-  <form class="converter-form">
-      <h2>Length Converter</h2>
-      <label for="length-input">Enter Length:</label>
-      <input type="number" id="length-input" placeholder="Enter length">
-      <label for="length-from">From:</label>
-      <select id="length-from">
-          <option value="m">Meters</option>
-          <option value="cm">Centimeters</option>
-          <option value="ft">Feet</option>
-      </select>
-      <label for="length-to">To:</label>
-      <select id="length-to">
-          <option value="m">Meters</option>
-          <option value="cm">Centimeters</option>
-          <option value="ft">Feet</option>
-      </select>
-      <button type="button">Convert</button>
-      <div class="result">Result: 0.00</div>
-  </form>
 
-  <!-- Add more converter forms as needed -->
-</main>
+  <h2>Length Converter</h2>
+  <label for="length-input">Enter Length:</label>
+  <input type="number" id="length-input" name="length" placeholder="Enter length">
+  <label for="length-from">From:</label>
+  <select id="length-from">
+    <option value="mm">millimeter</option>
+    <option value="cm">centimeter</option>
+    <option value="m">meter</option>
+    <option value="km">kilometer</option>
+    <option value="in">inch</option>
+    <option value="ft">foot</option>
+    <option value="yd">yard</option>
+    <option value="mi">mile</option>
+  </select>
+  <label for="length-to">To:</label>
+  <select id="length-to">
+    <option value="mm">millimeter</option>
+    <option value="cm">centimeter</option>
+    <option value="m">meter</option>
+    <option value="km">kilometer</option>
+    <option value="in">inch</option>
+    <option value="ft">foot</option>
+    <option value="yd">yard</option>
+    <option value="mi">mile</option>
+  </select>
+  <button type="submit">Convert</button>
+  <div class="result">Result: {{ result }}</div>
+
 {% endblock %}
