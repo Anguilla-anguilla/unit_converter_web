@@ -1,14 +1,18 @@
 from django.shortcuts import render
+from .utils import length_converter
 
 
 def length(request):
-    template = 'unit/length.html'   
+    template = 'unit/length.html'
     get_length = request.GET.get('length')
+    get_from_unit = request.GET.get('length-from')
+    get_to_unit = request.GET.get('length-to')
+    result = 0.0
 
-    if get_length:
-        result = get_length
-    else:
-        result = 0.0
+    if get_length is not None and get_length != '':
+        result = length_converter(value=int(get_length),
+                                  from_unit=get_from_unit,
+                                  to_unit= get_to_unit)
 
     context = {'result': result}
 
