@@ -19,11 +19,13 @@ This Django-based web application provides a simple and user-friendly interface 
 1. Clone the Repository:
 
 ``` git clone https://github.com/Anguilla-anguilla/unit_converter_web ```
+
 ``` cd unit_converter_web ```
 
 2. Create a Virtual Environment (optional but recommended):
 
 ``` python -m venv venv ```
+
 ``` source venv/bin/activate  # On Windows use `venv\Scripts\activate` ```
 
 3. Install Dependencies:
